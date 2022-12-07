@@ -19,10 +19,9 @@ void loop() {
   if(sensorValue<500){
     Serial.println("water on");
     digitalWrite(13,HIGH);
-    delay(500);
-  } else {
+  } else if(sensorValue>600){
       Serial.println("water off");
       digitalWrite(13,LOW);
-      delay(500);
   }
+  delay(5000);
 }
